@@ -1,0 +1,10 @@
+/*
+ *  file intro.c
+ * */
+
+#include "intro.h"
+
+// implementasi dari intro.h
+void displayHelloWorld() {
+  printf("%s", "Hello World!\n");
+}
