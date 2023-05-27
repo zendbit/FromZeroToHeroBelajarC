@@ -13,16 +13,24 @@ then
 fi
 
 ##  panggil compiler
-echo "Compile source..."
+clear
+echo ""
+echo "-> Compile source..."
 gcc -I$INCLUDE_DIR $SOURCE_DIR/*.c -o $BIN_DIR/$APP_NAME
 
 ##  eksekusi program jika tidak ada error
 ##  dari proses sebelumnya
 if [[ $? -eq 0 ]]
 then
-  echo "Success!, execute $BIN_DIR/$APP_NAME"
+  clear
+  echo "-> Compile Success!"
+  echo "-> Execute $BIN_DIR/$APP_NAME"
+  echo ""
+
   ##  eksekusi binary filenya
   $BIN_DIR/$APP_NAME
 else
-  echo "Failed!"
+  echo "x-> Failed!, eww"
 fi
+
+echo ""

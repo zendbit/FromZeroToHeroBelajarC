@@ -1,0 +1,15 @@
+/*
+ * file CTipeData.h
+ * untuk tutorial variable, constant, input output basic
+ * */
+
+#ifndef CTIPEDATA_H
+#define CTIPEDATA_H
+
+#include <stdio.h>
+#include <string.h>
+
+void initData();
+void printData();
+
+#endif
