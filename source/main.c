@@ -3,15 +3,16 @@
  *  executable program
  * */
 
-#include "COperator.h"
+#include "CInputOutput.h"
 
 int main() {
 
-  contohOperatorMath();
-  contohOperatorUnary();
-  contohOperatorRelationalLogical();
-  contohOperatorLogical();
-  contohOperatorBitwise();
+  //contohPrintf();
+  //contohScanf();
+  //contohSprintf();
+  //contohFprintf();
+  //contohGetc();
+  contohGetchar();
 
   return 0;
 }
