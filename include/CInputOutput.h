@@ -1,6 +1,6 @@
 /*
- *  CInputOutput.h
- *  Tutorial Pemrograman C Input/Output
+ * CInputOutput.h
+ * Tutorial C Input Output
  * */
 
 #ifndef _CINPUTOUTPUT_H

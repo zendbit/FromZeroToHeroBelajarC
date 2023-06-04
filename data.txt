@@ -1,0 +1,2 @@
+Menulis ke data.txt: Nama john, Umur 40
+
