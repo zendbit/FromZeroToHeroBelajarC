@@ -3,15 +3,13 @@
  *  executable program
  * */
 
-#include "CInputOutput.h"
+#include "CArrayString.h"
 
 int main() {
 
-  //contohPrintf();
-  //contohScanf();
-  //contohSprintf();
-  //contohFprintf();
-  contohGetc();
+  //contohArray();
+  //contohArray2d();
+  //contohArrayDynamic();
 
   return 0;
 }
