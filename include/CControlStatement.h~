@@ -1,0 +1,17 @@
+/*
+ * CControlStatement.h
+ *
+ * tutorial control statement/percabangan
+ * */
+
+#ifndef _CCONTROLSTATEMENT_H
+#define _CCONTROLSTATEMENT_H
+
+#include <stdio.h>
+#include <string.h>
+
+void contohIfElse();
+void contohIfElse2();
+void contohSwitch();
+
+#endif

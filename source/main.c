@@ -3,14 +3,14 @@
  *  executable program
  * */
 
-#include "CArrayString.h"
+#include "CControlStatement.h"
 
 int main() {
 
-  //contohArray();
-  //contohArray2d();
-  //contohArrayDynamic();
-  contohString();
+  //contohIfElse();
+  //contohIfElse2();
+  //contohSwitch();
+  contohGoto();
 
   return 0;
 }
