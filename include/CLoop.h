@@ -1,0 +1,19 @@
+/*
+ *  CLoop.h
+ *
+ *  Cloop - perulangan
+ *  - for
+ *  - while
+ *  - do while
+ * */
+
+#ifndef _CLOOP_H
+#define _CLOOP_H
+
+#include <stdio.h>
+
+void contohFor();
+void contohWhile();
+void contohDoWhile();
+
+#endif

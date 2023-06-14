@@ -3,14 +3,13 @@
  *  executable program
  * */
 
-#include "CControlStatement.h"
+#include "CLoop.h"
 
 int main() {
 
-  //contohIfElse();
-  //contohIfElse2();
-  //contohSwitch();
-  contohGoto();
+  //contohFor();
+  //contohWhile();
+  contohDoWhile();
 
   return 0;
 }
