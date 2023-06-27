@@ -3,12 +3,25 @@
  *  executable program
  * */
 
-#include "CLoop.h"
+#include "CFunction.h"
 
 int main() {
 
-  //contohFor();
-  contohWhile();
+  //msg();
 
-  return 0;
+  //int a, b;
+  //a = 5;
+  //b = 10;
+  //tambahBilangan(a, b);
+
+  //printf("Nilai a, b sebelum fungsi %d, %d\n", a, b);
+  //ubahVariable(a, b);
+  //swap(&a, &b);
+  //printf("Nilai a, b setelah fungsi %d, %d\n", a, b);
+
+  //void (*ptrMsg) = &msg;
+  //callback(ptrMsg);
+  
+  void (*ptrMsgText) = &msgText;
+  callbackText(ptrMsgText, "Hi, ini dari callback.\n");
 }
