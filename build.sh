@@ -7,7 +7,7 @@ BIN_DIR=bin
 APP_NAME=main
 
 ##  jika folder bin tidak ada maka buat foldernya
-if [[ ! -d $BIN_DIR ]]
+if [ ! -d $BIN_DIR ]
 then
   mkdir $BIN_DIR
 fi
@@ -20,7 +20,7 @@ gcc -I$INCLUDE_DIR $SOURCE_DIR/*.c -o $BIN_DIR/$APP_NAME
 
 ##  eksekusi program jika tidak ada error
 ##  dari proses sebelumnya
-if [[ $? -eq 0 ]]
+if [ $? -eq 0 ]
 then
   clear
   echo "-> Compile Success!"

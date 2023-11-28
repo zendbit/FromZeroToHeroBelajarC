@@ -3,25 +3,23 @@
  *  executable program
  * */
 
-#include "CFunction.h"
+#include <CStruct.h>
 
 int main() {
-
-  //msg();
-
-  //int a, b;
-  //a = 5;
-  //b = 10;
-  //tambahBilangan(a, b);
-
-  //printf("Nilai a, b sebelum fungsi %d, %d\n", a, b);
-  //ubahVariable(a, b);
-  //swap(&a, &b);
-  //printf("Nilai a, b setelah fungsi %d, %d\n", a, b);
-
-  //void (*ptrMsg) = &msg;
-  //callback(ptrMsg);
+  struct Player p = newPlayer("Bar", 10);
+  printf("name %s, level %d\n", p.name, p.level);
   
-  void (*ptrMsgText) = &msgText;
-  callbackText(ptrMsgText, "Hi, ini dari callback.\n");
+  Square box = newSquare("Box", 100, 100);
+  printf("name %s, width %d, height %d\n", box.name, box.width, box.height);
+
+  union Property prop;
+  prop.level = 10;
+  printf("level %d\n", prop.level);
+  
+  prop.health = 20;
+  printf("health %f\n", prop.health);
+  
+  memcpy(prop.type, "Player", sizeof(prop.type));
+  printf("type %s\n", prop.type);
 }
+
