@@ -3,23 +3,50 @@
  *  executable program
  * */
 
-#include <CStruct.h>
+#include <CPointer.h>
+#include <stddef.h>
+#include <stdlib.h>
 
-int main() {
-  struct Player p = newPlayer("Bar", 10);
-  printf("name %s, level %d\n", p.name, p.level);
-  
-  Square box = newSquare("Box", 100, 100);
-  printf("name %s, width %d, height %d\n", box.name, box.width, box.height);
+int main()
+{
+  struct Box box1;
+  box1.width = 10;
+  box1.height = 20;
 
-  union Property prop;
-  prop.level = 10;
-  printf("level %d\n", prop.level);
+  printBox(box1);
+
+  modifyBox(box1, 100, 100);
+
+  printBox(box1);
   
-  prop.health = 20;
-  printf("health %f\n", prop.health);
-  
-  memcpy(prop.type, "Player", sizeof(prop.type));
-  printf("type %s\n", prop.type);
+  modifyBoxWithPointer(&box1, 100, 100);
+
+  printBox(box1);
+
+  struct Box * box2 = NULL;
+  int numBox = 5;
+  initBox(&box2, numBox);
+
+  struct Box * ptrBox2 = box2;
+
+  int i;
+  for(i = 0; i < numBox ; i++)
+  {
+    modifyBoxWithPointer(ptrBox2, i * 2, i * 3);
+    ptrBox2++;
+  }
+
+  ptrBox2 = box2;
+  for(i = 0; i < numBox ; i++)
+  {
+    printBox(*ptrBox2);
+    ptrBox2++;
+  }
+
+  free(box2);
+  box2 = NULL;
+  ptrBox2 = NULL;
+
+  return 0;
 }
 
