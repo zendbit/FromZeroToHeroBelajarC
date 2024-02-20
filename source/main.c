@@ -3,50 +3,49 @@
  *  executable program
  * */
 
-#include <CPointer.h>
-#include <stddef.h>
+#include <CDynamicMem.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
 int main()
 {
-  struct Box box1;
-  box1.width = 10;
-  box1.height = 20;
+    unsigned int len = 1;
+    Message * msg = Message__new(len);
 
-  printBox(box1);
 
-  modifyBox(box1, 100, 100);
+    //strcpy(msg[0].from, "a@b.com");
+    strcpy(msg->from, "a@b.com");
+    strcpy(msg->text, "Hi apa kabar?");
 
-  printBox(box1);
-  
-  modifyBoxWithPointer(&box1, 100, 100);
+    len = 2;
 
-  printBox(box1);
+    Message * msg_ptr = NULL;
 
-  struct Box * box2 = NULL;
-  int numBox = 5;
-  initBox(&box2, numBox);
+    msg = Message__realloc(msg, 2 * sizeof(Message));
+    msg_ptr = msg;
 
-  struct Box * ptrBox2 = box2;
+    // message ada 2
+    msg_ptr++;
+    //strcpy(msg[1].from, "a@b.com");
+    strcpy(msg_ptr->from, "c@b.com");
+    strcpy(msg_ptr->text, "Hi C!");
 
-  int i;
-  for(i = 0; i < numBox ; i++)
-  {
-    modifyBoxWithPointer(ptrBox2, i * 2, i * 3);
-    ptrBox2++;
-  }
+    msg_ptr = msg;
 
-  ptrBox2 = box2;
-  for(i = 0; i < numBox ; i++)
-  {
-    printBox(*ptrBox2);
-    ptrBox2++;
-  }
+    for(int i = 0; i < len; i++) {
+        printf("msg from: %s\n", msg_ptr->from);
+        printf("msg text: %s\n", msg_ptr->text);
+        msg_ptr++;
+        
+        //printf("msg from: %s\n", msg[i].from);
+        //printf("msg text: %s\n", msg[i].text);
+    }
 
-  free(box2);
-  box2 = NULL;
-  ptrBox2 = NULL;
+    free(msg);
+    msg = NULL;
+    msg_ptr = NULL;
 
-  return 0;
+    return 0;
 }
 
