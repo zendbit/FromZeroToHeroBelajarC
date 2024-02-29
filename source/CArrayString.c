@@ -71,8 +71,8 @@ void contohString() {
   char str3[6] = { 'H', 'e', 'l', 'l', 'o', '\0'};
 
   printf("char string str3 %s\n", str3);
-  printf("panjang array str2: %d\n", strlen(str2));
-  printf("panjang array str3: %d\n", strlen(str3));
+  printf("panjang array str2: %lu\n", strlen(str2));
+  printf("panjang array str3: %lu\n", strlen(str3));
 
   // contoh strcpy
   char strtmp[20];

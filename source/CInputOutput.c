@@ -18,7 +18,7 @@ void contohScanf() {
   int umur;
   char nama[20];
   printf("masukkan nama: ");
-  scanf("%s", &nama);
+  scanf("%s", (char*)&nama);
   printf("masukkan umur: ");
   scanf("%d", &umur);
   printf("Nama %s, Umur %d\n", nama, umur);
@@ -28,18 +28,18 @@ void contohSprintf() {
   char bufferText[20], nama[20];
   int umur;
   printf("masukkan nama: ");
-  scanf("%s", &nama);
+  scanf("%s", (char*)&nama);
   printf("masukkan umur: ");
   scanf("%d", &umur);
   sprintf(bufferText, "Nama %s, Umur %d\n", nama, umur);
-  printf(bufferText);
+  printf("%s", bufferText);
 }
 
 void contohFprintf() {
   char bufferText[20], nama[20];
   int umur;
   printf("masukkan nama: ");
-  scanf("%s", &nama);
+  scanf("%s", (char*)&nama);
   printf("masukkan umur: ");
   scanf("%d", &umur);
   sprintf(bufferText, "Nama %s, Umur %d\n", nama, umur);

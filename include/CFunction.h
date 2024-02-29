@@ -4,7 +4,7 @@
  * */
 
 #ifndef _CFUNCTION_H
-#define _CFUNTION_H
+#define _CFUNCTION_H
 
 #include <stdio.h>
 

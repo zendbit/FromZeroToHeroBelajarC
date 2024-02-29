@@ -53,7 +53,7 @@ void contohDoWhile() {
 
   do {
     printf("masukkan [a-z]: ");
-    scanf(" %c", &c);
+    scanf(" %d", &c);
 
     printf("nilai char %c:\n", (char)c);
 

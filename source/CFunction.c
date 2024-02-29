@@ -10,6 +10,7 @@ void msg() {
 
 int tambahBilangan(int a, int b) {
   printf("nilai a + b: %d\n", (a + b));
+  return a + b;
 }
 
 // pass by value
